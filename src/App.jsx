@@ -23,14 +23,15 @@ const AppGalleryLogo = () => (
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-900 text-white font-sans selection:bg-emerald-500 selection:text-white">
+    <div className="min-h-screen bg-diski-dark text-white font-sans selection:bg-diski-green selection:text-white">
       {/* Navigation */}
-      <nav className="fixed w-full z-50 glass">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-purple-500">
-            DiskiChat
+      {/* Navigation */}
+      <nav className="fixed w-full z-50 bg-white shadow-md">
+        <div className="container mx-auto px-6 py-4 flex justify-center items-center relative">
+          <div className="h-12 w-auto">
+            <img src="/logo.png" alt="DiskiChat Logo" className="h-full w-auto object-contain" />
           </div>
-          <a href="#download" className="hidden md:block bg-white text-slate-900 px-6 py-2 rounded-full font-semibold hover:bg-emerald-400 hover:text-white transition-all duration-300">
+          <a href="#download" className="hidden md:flex absolute right-6 bg-diski-green text-white px-6 py-2 rounded-full font-semibold hover:bg-emerald-600 hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.5)]">
             Get the App
           </a>
         </div>
@@ -40,15 +41,15 @@ function App() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Abstract Background */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-          <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-purple-600 rounded-full blur-[128px] opacity-40 animate-pulse"></div>
-          <div className="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-emerald-600 rounded-full blur-[128px] opacity-40 animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-diski-purple rounded-full blur-[128px] opacity-30 animate-pulse"></div>
+          <div className="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-diski-green rounded-full blur-[128px] opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
 
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-center md:text-left z-10">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
               The Ultimate <br />
-              <span className="text-emerald-400">Second Screen</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-diski-green to-emerald-300">Second Screen</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-lg mx-auto md:mx-0">
               For the love of the game. Join the banter, place your bets, and follow live matches with thousands of other South African soccer fans.
@@ -72,15 +73,15 @@ function App() {
 
             <div className="mt-8 flex items-center justify-center md:justify-start gap-6 text-sm text-slate-400">
               <div className="flex items-center">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2"></span>
+                <span className="w-2 h-2 rounded-full bg-diski-green mr-2 shadow-[0_0_8px_#10b981]"></span>
                 Live Scores
               </div>
               <div className="flex items-center">
-                <span className="w-2 h-2 rounded-full bg-purple-500 mr-2"></span>
+                <span className="w-2 h-2 rounded-full bg-diski-purple mr-2 shadow-[0_0_8px_#6d28d9]"></span>
                 Community Chat
               </div>
               <div className="flex items-center">
-                <span className="w-2 h-2 rounded-full bg-orange-500 mr-2"></span>
+                <span className="w-2 h-2 rounded-full bg-orange-500 mr-2 shadow-[0_0_8px_#f97316]"></span>
                 Betting
               </div>
             </div>
@@ -95,49 +96,71 @@ function App() {
               <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
               <div className="rounded-[2rem] overflow-hidden w-full h-full bg-white dark:bg-gray-800 relative">
                 {/* Simulated Screen Content */}
-                <div className="bg-slate-900 w-full h-full flex flex-col">
-                  <div className="bg-emerald-600 h-16 flex items-end p-4 shadow-lg z-10">
-                    <div className="font-bold text-white">DiskiChat</div>
+                {/* Simulated Screen Content */}
+                <div className="bg-diski-dark w-full h-full flex flex-col">
+                  <div className="bg-diski-surface h-16 flex items-end p-4 shadow-lg z-10 border-b border-white/5">
+                    <div className="font-bold text-white flex items-center gap-2">
+                      <span className="w-2 h-2 bg-diski-green rounded-full animate-pulse"></span>
+                      Live Match
+                    </div>
                   </div>
-                  <div className="flex-1 p-4 space-y-4 overflow-hidden">
-                    <div className="glass p-3 rounded-lg border-l-4 border-emerald-500">
-                      <div className="text-xs text-emerald-400 font-bold">LIVE • 45'</div>
-                      <div className="flex justify-between items-center mt-1">
-                        <span className="font-bold">Chiefs</span>
-                        <span className="text-2xl font-bold">1 - 0</span>
-                        <span className="font-bold">Pirates</span>
+                  <div className="flex-1 p-4 space-y-4 overflow-hidden bg-gradient-to-b from-diski-dark to-[#050b14]">
+                    <div className="glass p-4 rounded-xl border border-white/10 bg-diski-surface/50">
+                      <div className="text-xs text-diski-green font-bold mb-2 flex justify-between">
+                        <span>LIVE • 45'</span>
+                        <span className="text-white/50">PSL</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="font-bold text-lg">Chiefs</span>
+                        <div className="px-3 py-1 bg-diski-dark rounded-md border border-white/10 font-mono text-xl text-diski-green">1 - 0</div>
+                        <span className="font-bold text-lg">Pirates</span>
                       </div>
                     </div>
 
-                    <div className="space-y-2">
-                      <div className="bg-slate-800 p-2 rounded-lg text-sm rounded-tl-none">
-                        <span className="text-purple-400 font-bold text-xs block">@Lebo_M</span>
+                    <div className="space-y-3">
+                      <div className="bg-diski-surface p-3 rounded-2xl text-sm rounded-tl-none border border-white/5">
+                        <span className="text-diski-purple font-bold text-xs block mb-1">@Lebo_M</span>
                         What a goal! Shabba requires respect! 🔥
                       </div>
-                      <div className="bg-slate-800 p-2 rounded-lg text-sm rounded-tr-none text-right ml-auto bg-emerald-900/30">
-                        <span className="text-emerald-400 font-bold text-xs block">You</span>
+                      <div className="bg-diski-green/20 p-3 rounded-2xl text-sm rounded-tr-none text-right ml-auto border border-diski-green/20">
+                        <span className="text-diski-green font-bold text-xs block mb-1">You</span>
                         Absolutely electric atmosphere!
                       </div>
-                      <div className="bg-slate-800 p-2 rounded-lg text-sm rounded-tl-none">
-                        <span className="text-orange-400 font-bold text-xs block">@BetKing</span>
+                      <div className="bg-diski-surface p-3 rounded-2xl text-sm rounded-tl-none border border-white/5">
+                        <span className="text-orange-400 font-bold text-xs block mb-1">@BetKing</span>
                         Odds shift: Chiefs to win now 1.15
                       </div>
                     </div>
                   </div>
                   {/* Tab Bar */}
-                  <div className="h-14 bg-slate-900 border-t border-slate-800 flex justify-around items-center text-slate-400">
-                    <div className="text-emerald-500 flex flex-col items-center"><span className="text-xs">Home</span></div>
-                    <div className="flex flex-col items-center"><span className="text-xs">Fixtures</span></div>
-                    <div className="flex flex-col items-center"><span className="text-xs">Chat</span></div>
-                    <div className="flex flex-col items-center"><span className="text-xs">Profile</span></div>
+                  <div className="h-16 bg-diski-surface border-t border-white/5 flex justify-around items-center text-slate-400">
+                    <div className="text-diski-green flex flex-col items-center gap-1">
+                      <div className="w-5 h-5 bg-white/10 rounded-full"></div>
+                      <span className="text-[10px]">Home</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-5 h-5 bg-white/5 rounded-full"></div>
+                      <span className="text-[10px]">Fixtures</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-5 h-5 bg-white/5 rounded-full"></div>
+                      <span className="text-[10px]">Chat</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-5 h-5 bg-white/5 rounded-full"></div>
+                      <span className="text-[10px]">Profile</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             {/* Floating elements */}
-            <div className="absolute top-1/2 left-0 -translate-x-12 translate-y-12 glass p-4 rounded-xl animate-bounce" style={{ animationDuration: '3s' }}>
-              <div className="text-emerald-400 font-bold">Live Stats</div>
-              <div className="text-sm">Possession: 60% - 40%</div>
+            <div className="absolute top-1/2 left-0 -translate-x-12 translate-y-12 glass p-4 rounded-xl animate-bounce border border-diski-green/30" style={{ animationDuration: '3s' }}>
+              <div className="text-diski-green font-bold flex items-center gap-2">
+                <span className="w-2 h-2 bg-red-500 rounded-full animate-ping"></span>
+                Live Stats
+              </div>
+              <div className="text-sm mt-1 text-slate-300">Possession: 60% - 40%</div>
             </div>
           </div>
         </div>

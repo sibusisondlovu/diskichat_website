@@ -1,11 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer utilities {
-  .glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
+@theme {
+  --color-diski-purple: #0D47A1;
+  /* Replaced purple with Primary Blue from App */
+  --color-diski-green: #00C853;
+  /* Live Green */
+  --color-diski-dark: #0D1B2A;
+  /* Primary Dark */
+  --color-diski-surface: #1B263B;
+  /* Card Surface */
+}
+
+@utility glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
