@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+# Probe file to verify Azure Static Web Apps deployment
+# If you can see this, static assets are being served correctly.
