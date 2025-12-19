@@ -1,16 +1,76 @@
-# React + Vite
+# DiskiChat Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The official marketing and landing website for the DiskiChat mobile application. Built with modern web technologies to provide a fast, responsive, and engaging user experience.
 
-Currently, two official plugins are available:
+## 🚀 Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is built using the following stack:
 
-## React Compiler
+- **[React 19](https://react.dev/)**: The library for web and native user interfaces.
+- **[Vite](https://vitejs.dev/)**: Next Generation Frontend Tooling for fast development and building.
+- **[Tailwind CSS](https://tailwindcss.com/)**: A utility-first CSS framework for rapid UI development.
+- **Azure Static Web Apps**: Hosted and deployed via Azure's global CDN.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Project Setup
 
-## Expanding the ESLint configuration
+Follow these steps to get the project running locally on your machine.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (Version 18 or higher)
+- npm (Node Package Manager)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd diskichat_website
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## 💻 Development
+
+Start the local development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173` (or the port shown in your terminal).
+
+## 📦 Build
+
+To create a production build of the application:
+
+```bash
+npm run build
+```
+
+The built entries will be placed in the `dist/` directory. You can preview the production build locally using:
+
+```bash
+npm run preview
+```
+
+## ☁️ Deployment
+
+This project is configured for continuous deployment to **Azure Static Web Apps**. 
+
+- **Workflow**: `.github/workflows/azure-static-web-apps-lemon-glacier-00b314203.yml`
+- **Output Location**: `dist`
+- **App Location**: `/`
+
+Any push to the `main` branch will automatically trigger a build and deploy action.
+
+## 📄 License
+
+This project is private and proprietary.
